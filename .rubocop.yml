@@ -1,0 +1,45 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+    - 'test/fixtures/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+Rails:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 30
+Metrics/ModuleLength:
+  Max: 150
+Metrics/LineLength:
+  Max: 120
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 40
+Metrics/PerceivedComplexity:
+  Max: 10
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 175
+
+Rails/HttpPositionalArguments:
+  # see https://github.com/bbatsov/rubocop/issues/3629, this is for Rails 5 only
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
+Style/StructInheritance:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
